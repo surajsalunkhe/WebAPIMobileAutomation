@@ -1,4 +1,4 @@
-package Utility;
+package utility;
 
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;

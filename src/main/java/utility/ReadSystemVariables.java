@@ -1,4 +1,4 @@
-package Utility;
+package utility;
 
 import org.openqa.selenium.Dimension;
 import org.slf4j.Logger;

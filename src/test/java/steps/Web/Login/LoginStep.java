@@ -2,6 +2,7 @@ package steps.Web.Login;
 import java.util.List;
 import java.util.Map;
 
+import Base.Web.WebBaseClass;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -12,6 +13,10 @@ import io.cucumber.java.en.When;
 
 
 public class LoginStep {
+	private WebBaseClass webBaseClass;
+	public LoginStep(WebBaseClass webBaseClass){
+		this.webBaseClass=webBaseClass;
+	}
 	
 	@Before
 	public void setup() {
@@ -30,12 +35,12 @@ public class LoginStep {
 	public void prodteardown() {
 		System.out.println("prod browser quit");
 	}
-	
-	
+
+
 	@Given("user navigates to facebook website")
 	public void user_navigatesto_facebook_website() {
-		System.out.println("@Given -- user navigates to the facebook");
-	
+		System.out.println("@Given -- user navigates to the facebook ==>"+webBaseClass.getFeatureName()+webBaseClass.getScenarioName());
+
 	}
 
 	@When("user validates the homepage title")
@@ -44,7 +49,7 @@ public class LoginStep {
 	}
 
 	@Then("^user entered \"([^\"]*)\" username$")
-	public void user_entered_valid_username(String username) {
+	public void user_entered_valid_username( String username) {
 		System.out.println("@Then -- user entered "+username+" username");
 	}
 
