@@ -1,24 +1,24 @@
 package webtesting.generichook;
 
 
+import Base.WebDriverFactory;
 import cucumber.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
-import webtesting.services.DriverServices;
 
 import java.io.IOException;
 
 @SuppressWarnings(value = "deprecation")
 public class GeneralHook {
 	
-	private DriverServices services;
+	private WebDriverFactory services;
 	private WebDriver driver;
 	
 	private static CustomExtentReporter customExtentReporter;
 	private static boolean isReporterRunning;
 	
-	public GeneralHook(DriverServices services) {
+	public GeneralHook(WebDriverFactory services) {
 		this.services = services;
 		this.driver = services.getDriver();
 	}
@@ -41,14 +41,14 @@ public class GeneralHook {
 	@Before
 	public void beforeScenario(Scenario scenario) {
 		if(!isReporterRunning){
-			customExtentReporter = new CustomExtentReporter("C:\\Data\\log\\TestReport.html");
+			customExtentReporter = new CustomExtentReporter("src/test/resources/reportTestReport.html");
 			isReporterRunning = true;
 		}
 	}
 	
 	@After
 	public void afterScenario(Scenario scenario) throws IOException {
-		String screenShotFileName = "C:\\Data\\log\\" + scenario.getName().replaceAll(" ", "") + ".jpeg";
+		String screenShotFileName = "src/test/resources/Common" + scenario.getName().replaceAll(" ", "") + ".jpeg";
 		if(scenario.isFailed()){
 			services.getGenericHelper().takeScreenShot(screenShotFileName);
 		}

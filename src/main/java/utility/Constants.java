@@ -49,8 +49,8 @@ public final class Constants {
 	public static final String TEST_RESOURCES = "src/test/resources/";
 	public static final String TEST_RESOURCES_JSON = "src/test/resources/data/json/";
 	public static final String TEST_RESOURCES_XML = "src/test/resources/data/xml/";
-	public static final String TEST_RESOURCES_CONFIG = "src/test/resources/properties";
-	public static final String TEST_SCREENSHOT_PATH = "/target/jbehave/screenshots/";
+	public static final String TEST_RESOURCES_CONFIG = "src/test/resources/config/";
+	public static final String TEST_SCREENSHOT_PATH = "/test/resources/screenshots/";
 	public static final String LOGS = "logs/";
 	public static final String WEB_ATTRIBUTE_ALIAS_CONFIG = Constants.TEST_RESOURCES_CONFIG + "attributeAlias.config";
 	public static final String ANDROID_ATTRIBUTE_ALIAS_CONFIG = Constants.TEST_RESOURCES_CONFIG + "androidMobileAlias.config";
@@ -78,7 +78,6 @@ public final class Constants {
 	public static final String HTTP_COOKIE_HDR = "COOKIE_HDR";
 	public static final String TEMP_FILE_COOKIE_HDR = "***TEMP_FILE_VARIABLE:HEADER_FIELD_COOKIE***";
 	public static final String HTTP_MPASSCSRFTKN_HDR = "MPASSCSRFTKN_HDR";
-	public static final String TEMP_FILE_MPASSCSRFTKN_HDR = "***TEMP_FILE_VARIABLE:HEADER_FIELD_mpasscsrftoken***";
 	public static final int HTTP_STATUS_OK = 200;
 	public static final int HTTP_STATUS_BAD_REQUEST = 400;
 	public static final int HTTP_STATUS_CLIENT_ERROR = 401;

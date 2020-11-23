@@ -1,6 +1,6 @@
 package enums;
 
-public enum BrowserType {
+public enum BrowserToRun {
     FIREFOX,
     CHROME,
     SAFARI,

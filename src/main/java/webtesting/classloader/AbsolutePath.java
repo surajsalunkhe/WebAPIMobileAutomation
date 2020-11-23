@@ -14,7 +14,7 @@ public class AbsolutePath {
 		
 		Class cls = AbsolutePath.class;
 		ClassLoader loader = cls.getClassLoader();
-		URL url = loader.getResource("./chromedriver.exe"); // "." current working directory ".." parent dir
+		URL url = loader.getResource("./chromedriver"); // "." current working directory ".." parent dir
 		System.out.println(url.toString());
 		
 	}

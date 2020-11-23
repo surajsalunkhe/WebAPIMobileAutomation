@@ -14,7 +14,7 @@ import java.net.URL;
 public class CustomInternetExplorerDriver implements BrowserConfiguration  {
 	
 	private void setDriverExecutable(){
-		System.setProperty(InternetExplorerDriverService.IE_DRIVER_EXE_PROPERTY, "C:\\Users\\rathr1\\Downloads\\IEDriverServer_x64_3.8.0\\IEDriverServer.exe");
+		System.setProperty(InternetExplorerDriverService.IE_DRIVER_EXE_PROPERTY, System.getProperty("user.dir")+"src/test/resources/grid/IEDriverServer.exe");
 	}
 	
 	private InternetExplorerOptions getInternetExplorerOption() {

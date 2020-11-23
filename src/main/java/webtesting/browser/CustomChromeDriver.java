@@ -1,24 +1,22 @@
 package webtesting.browser;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import webtesting.utils.ResourceUtils;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class CustomChromeDriver implements BrowserConfiguration{
-	
+
 	private void setDriverExecutable(){
 		String	chromePath = "";
 		if(System.getProperty("os.name").contains("Windows"))
 			chromePath = ResourceUtils.getResourcePath("chromedriver.exe");
 		else
-			chromePath = "/home/vagrant/jenkins_home/chromedriver";
+			chromePath = "src/test/resources/grid/chromedriver";
 		
 		/*System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\rathr1\\Downloads\\chromedriver_win32\\chromedriver.exe");*/
